@@ -32,20 +32,17 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>${jettyVersion}</version>
         <configuration>
-          <scanIntervalSeconds>0</scanIntervalSeconds>
-          <reload>automatic</reload>
+          <scan>5</scan>
         </configuration>
       </plugin>
 
       <plugin>
-   <groupId>org.codehaus.mojo</groupId>
-   <artifactId>tomcat-maven-plugin</artifactId>
-    <configuration>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>tomcat-maven-plugin</artifactId>
+        <configuration>
           <scanIntervalSeconds>5</scanIntervalSeconds>
         </configuration>
-      
-</plugin>
-
+      </plugin>
     </plugins>
   </build>
 </project>
