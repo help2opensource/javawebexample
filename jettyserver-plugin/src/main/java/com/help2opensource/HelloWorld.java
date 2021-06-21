@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 
 // Extend HttpServlet class
 public class HelloWorld extends HttpServlet {
- 
+
    private String message;
 
    public void init() throws ServletException {
@@ -14,9 +14,8 @@ public class HelloWorld extends HttpServlet {
       message = "Hello World";
    }
 
-   public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-      
+   public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
       // Set response content type
       response.setContentType("text/html");
 
