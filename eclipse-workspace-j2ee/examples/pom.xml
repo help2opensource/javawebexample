@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>helloServlet</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>Jetty HelloWorld WebApp</name>
+
+  <properties>
+    <jettyVersion>9.0.0</jettyVersion>
+  </properties>
+
+  <dependencies>
+  <dependency>
+              <groupId>javax.servlet</groupId>
+              <artifactId>javax.servlet-api</artifactId>
+              <version>3.0.1</version>
+              <scope>provided</scope>
+          </dependency>
+          <dependency>
+              <groupId>junit</groupId>
+              <artifactId>junit</artifactId>
+              <version>4.12</version>
+              <scope>test</scope>
+          </dependency>
+          
+          <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+        
+        
+
+<dependency>
+  <groupId>org.eclipse.jetty</groupId>
+  <artifactId>jetty-servlet</artifactId>
+  <version>11.0.5</version>
+</dependency>
+
+        
+        
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>7.5.1.v20110908</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jsp-2.1-glassfish</artifactId>
+            <version>2.1.v20100127</version>
+        </dependency>	
+    <dependency>
+      <groupId>org.eclipse.jetty.orbit</groupId>
+      <artifactId>javax.servlet</artifactId>
+      <version>3.0.0.v201112011016</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    
+    <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>11.0.5</version>
+</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.mortbay.jetty/jetty -->
+<dependency>
+    <groupId>org.mortbay.jetty</groupId>
+    <artifactId>jetty</artifactId>
+    <version>7.0.0.pre5</version>
+</dependency>
+    
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jettyVersion}</version>
+      </plugin>
+      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${version.java}</source>
+                    <target>${version.java}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.3.v20170317</version>
+                <configuration>
+                    <stopKey>C</stopKey>
+                    <stopPort>34343</stopPort>
+                    <httpConnector>
+                        <port>8080</port>
+                    </httpConnector>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+      
+    </plugins>
+  </build>
+
+</project>  

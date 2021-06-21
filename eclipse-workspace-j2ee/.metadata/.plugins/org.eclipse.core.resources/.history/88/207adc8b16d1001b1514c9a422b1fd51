@@ -1,0 +1,36 @@
+package org.examples;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.mortbay.jetty.HttpURI;
+import org.mortbay.jetty.Request;
+import org.mortbay.jetty.handler.HandlerWrapper;
+
+
+
+class FilterHandler extends HandlerWrapper
+{
+    public void handle(String target, Request jettyRequest, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
+    {
+        String path = request.getRequestURI();
+        if (path.startsWith("/old_path/"))
+        {
+            // Rewrite old paths to new paths.
+            HttpURI uri = jettyRequest.getHttpURI();
+            String newPath = "/new_path/" + path.substring("/old_path/".length());
+            HttpURI newURI = HttpURI.build(uri).path(newPath);
+            // Modify the request object.
+            jettyRequest.setHttpURI(newURI);
+        }
+
+        // This Handler is not handling the request, so
+        // it does not call jettyRequest.setHandled(true).
+
+        // Forward to the next Handler.
+        super.handle(target, jettyRequest, request, response);
+    }
+}
