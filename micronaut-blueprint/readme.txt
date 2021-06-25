@@ -7,3 +7,11 @@ mvn clean install
       <version>8.0.25</version>
       <scope>runtime</scope>
     </dependency>
+
+
+netstat -vanp tcp | grep 8080
+
+lsof -i tcp:3000 
+
+
+https://michael.codes/posts/micronaut-intro/

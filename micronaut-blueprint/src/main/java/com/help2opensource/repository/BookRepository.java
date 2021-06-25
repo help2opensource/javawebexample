@@ -4,10 +4,12 @@ import io.micronaut.context.annotation.Executable;
 import io.micronaut.data.annotation.*;
 import io.micronaut.data.repository.CrudRepository;
 
+import javax.inject.Singleton;
+
 import com.help2opensource.model.Book;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long> {
     @Executable
-    Book findByTitle(String title);
+    Book find(String title);
 }

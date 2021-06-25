@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Book {
     @Id
     @GeneratedValue
+
     private Long id;
     private String title;
     private int pages;
