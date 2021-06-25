@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.help2opensource
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, data, data-jpa, hibernate-jpa, http-client, java, java-application, jdbc-tomcat, junit, logback, maven, mysql, netty-server, readme, shade, testcontainers, views-freemarker, yaml]
