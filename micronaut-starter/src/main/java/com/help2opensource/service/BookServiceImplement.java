@@ -22,4 +22,10 @@ public class BookServiceImplement implements BookService {
         return bookRepository.findAll();
     }
 
+    @Override
+    public Book getFirstBook() {
+        long i = 1L;
+        return bookRepository.findById(i);
+    }
+
 }

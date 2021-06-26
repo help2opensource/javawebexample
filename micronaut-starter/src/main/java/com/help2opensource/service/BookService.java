@@ -4,4 +4,6 @@ import com.help2opensource.model.Book;
 
 public interface BookService {
     Iterable<Book> getAllBooks();
+
+    Book getFirstBook();
 }

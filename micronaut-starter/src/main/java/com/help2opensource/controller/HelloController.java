@@ -1,11 +1,10 @@
 package com.help2opensource.controller;
 
 import com.help2opensource.model.Book;
-import com.help2opensource.repository.BookRepository;
 import com.help2opensource.service.BookService;
-import com.oracle.svm.core.annotate.Inject;
 
 import io.micronaut.http.annotation.*;
+import io.micronaut.views.ModelAndView;
 
 @Controller("/hello")
 
@@ -25,6 +24,16 @@ public class HelloController {
     @Get("/data")
     public Iterable<Book> data() {
         return bookService.getAllBooks();
+    }
+
+    @Get("/book")
+    public Book firstBook() {
+        return bookService.getFirstBook();
+    }
+
+    @Get("/view")
+    public ModelAndView firstBookView() {
+        return new ModelAndView("home", bookService.getFirstBook());
     }
 
 }

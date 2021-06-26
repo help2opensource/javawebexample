@@ -12,4 +12,7 @@ import com.help2opensource.model.Book;
 public interface BookRepository extends CrudRepository<Book, Long> {
     @Executable
     Book find(String title);
+
+    @Executable
+    Book findById(long i);
 }
