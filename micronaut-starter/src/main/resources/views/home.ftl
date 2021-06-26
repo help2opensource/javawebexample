@@ -5,9 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>title: <span>${title}</span></h1>
-
-Mode and view Page
-
+<h1>Book title: <span>${title}</span></h1>
+say hello
 </body>
 </html>
