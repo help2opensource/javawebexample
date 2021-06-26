@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.help2opensource
+testFramework: spock
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, cache-ehcache, data, data-jpa, flyway, hibernate-jpa, http-client, http-session, java, java-application, jdbc-tomcat, logback, maven, mysql, netty-server, properties, readme, security, security-annotations, security-jwt, shade, spock, testcontainers, views-freemarker]
